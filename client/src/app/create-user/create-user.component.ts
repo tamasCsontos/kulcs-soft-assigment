@@ -7,10 +7,10 @@ import {Observable} from 'rxjs';
 
 @Component({
   selector: 'create-user',
-  templateUrl: './register-user.component.html',
-  styleUrls: ['./register-user.component.css']
+  templateUrl: './create-user.component.html',
+  styleUrls: ['./create-user.component.css']
 })
-export class RegisterUserComponent implements OnInit {
+export class CreateUserComponent implements OnInit {
 
   user: User = new User();
   submitted = false;
@@ -35,6 +35,5 @@ export class RegisterUserComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.save();
-    this.router.navigate(['users']);
   }
 }

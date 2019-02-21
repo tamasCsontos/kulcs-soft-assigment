@@ -19,6 +19,10 @@ export class UserService {
     return this.http.post(`${this.baseUrl}` + `/create`, user);
   }
 
+  updateUser(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
+  }
+
   deleteUser(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
@@ -26,7 +30,6 @@ export class UserService {
   getUsersList(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
-
 
   deleteAll(): Observable<any> {
     return this.http.delete(`${this.baseUrl}` + `/delete`, { responseType: 'text' });
