@@ -22,7 +22,7 @@ export class UserDetailsComponent implements OnInit {
 
 
   deleteUser() {
-    this.notifierService.notify( 'success', 'You deleted the user!' );
+    this.notifierService.notify( 'success', 'You deleted the user' );
     this.userService.deleteUser(this.user.id)
       .subscribe(
         data => {

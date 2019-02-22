@@ -7,8 +7,13 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
 import {NotifierModule} from 'angular-notifier';
+import {HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import {AuthGuard} from './auth.guard.service';
+
+
+
 
 
 @NgModule({
@@ -17,16 +22,19 @@ import {NotifierModule} from 'angular-notifier';
     CreateUserComponent,
     UserDetailsComponent,
     UserListComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NotifierModule
+    NotifierModule,
 
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
