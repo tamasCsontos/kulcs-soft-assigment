@@ -20,7 +20,7 @@ export class UserService {
   private isAuth  = false;
 
 
-  private baseUrl = 'http://localhost:8080/api/users';
+  private baseUrl = 'https://mysterious-springs-56205.herokuapp.com/api/users';
 
   constructor(private http: HttpClient, private router: Router) { }
 
